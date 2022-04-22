@@ -5,7 +5,7 @@ namespace Tickets.Data.Entities
     public class ticket
     {
         public int Id { get; set; }
-        public Boolean WasUsed { get; set; }
+        public bool WasUsed { get; set; }
 
         [Display(Description = "Documento")]
         [MaxLength(20, ErrorMessage = "El campo {0} debe tener máximo {1} Caractéres")]
@@ -17,8 +17,8 @@ namespace Tickets.Data.Entities
         [Required(ErrorMessage = " El campo {0} es obligatorio")]
         public string Name { get; set; }
 
-        public Entrance  Entrance { get; set; }
+        public Entrance  entrance { get; set; }
         
-        public DateTime DeDate { get; set; }
+        public DateTime Date { get; set; }
     }
 }

@@ -40,7 +40,7 @@ namespace Tickets.Data
 
         private async Task AddTicketsAsync()
         {
-            for (int i = 1; i <= 2; i++)
+            for (int i = 1; i <= 5000; i++)
                
             {
                 ticket tickets = new()
@@ -49,9 +49,8 @@ namespace Tickets.Data
                     WasUsed = false,
                     Document = "",
                     Name = "Disponible",
-                    entrance = new() { Id = 0, Description = "" },
-                    Date = new DateTime(0000, 00, 00, 00, 00, 00)
-
+                    entrance = new() { Description = "" },
+                    Date =  DateTime.Now
 
                 };
                 _context.tickets.Add(tickets);
@@ -63,7 +62,7 @@ namespace Tickets.Data
         {
             Entrance entrance = new()
             {
-                Id = id,
+                
                 Description = description
             };
             _context.entrances.Add(entrance);

@@ -41,6 +41,7 @@ namespace Tickets.Data
         private async Task AddTicketsAsync()
         {
             for (int i = 1; i <= 2; i++)
+               
             {
                 ticket tickets = new()
                 {

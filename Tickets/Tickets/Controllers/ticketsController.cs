@@ -25,24 +25,6 @@ namespace Tickets.Controllers
             return View(await _context.tickets.ToListAsync());
         }
 
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var ticket = await _context.tickets
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (ticket == null)
-            {
-                return NotFound();
-            }
-
-            return View(ticket);
-        }
-
-     
         public IActionResult Create()
         {
             return View();
